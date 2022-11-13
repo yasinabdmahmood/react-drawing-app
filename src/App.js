@@ -1,18 +1,21 @@
 import rough from 'roughjs/bundled/rough.esm';
 import React, { useLayoutEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { addNewElement , updateElements, setIsDrawing } from './redux/stateReducer'
 import './App.css';
 
 const generator = rough.generator();
 function App() {
-  const [elements, setElements] = useState([]);
-  const [drawing, setDrawing] = useState(false);
+  const drawings = useSelector((state) => state.canvas.elements)
+  const isDrawing = useSelector((state) => state.canvas.isDrawing)
+  const dispatch = useDispatch();
   const [elementType, setElementType] = useState('line');
   useLayoutEffect(() => {
     const canvas = document.getElementById('canvas');
     const roughCanvas = rough.canvas(canvas);
     const context = canvas.getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
-    elements.forEach(({ roughElement }) => {
+    drawings.forEach(({ roughElement }) => {
       roughCanvas.draw(roughElement);
     });
   });
@@ -25,24 +28,24 @@ function App() {
     };
   };
   const handleMouseDown = (e) => {
-    setDrawing(true);
+    dispatch(setIsDrawing(true))
     const { clientX, clientY } = e;
     const element = createElement(clientX, clientY, clientX, clientY);
-    setElements((prev) => [...prev, element]);
+    dispatch(addNewElement(element));
   };
   const handleMouseMove = (e) => {
-    if (!drawing) return;
-    const index = elements.length - 1;
-    const lastElement = elements[index];
+    if (!isDrawing) return;
+    const index = drawings.length - 1;
+    const lastElement = drawings[index];
     const { x1, y1 } = lastElement;
     const { clientX, clientY } = e;
     const updatedElement = createElement(x1, y1, clientX, clientY);
-    const copyElements = [...elements];
+    const copyElements = [...drawings];
     copyElements[index] = updatedElement;
-    setElements(copyElements);
+    dispatch(updateElements(copyElements));
   };
   const handleMouseUp = () => {
-    setDrawing(false);
+    dispatch(setIsDrawing(false))
   };
   return (
     <div>
