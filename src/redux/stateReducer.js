@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     elements: [],
     isDrawing: false,
+    elementType: 'line'
 }
 
 export const counterSlice = createSlice({
@@ -17,11 +18,14 @@ export const counterSlice = createSlice({
     },
     setIsDrawing: (state,action) => {
         state.isDrawing = action.payload;
+    },
+    setElementType: (state,action) => {
+        state.elementType = action.payload;
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addNewElement , updateElements, setIsDrawing } = counterSlice.actions
+export const { addNewElement , updateElements, setIsDrawing, setElementType } = counterSlice.actions
 
 export default counterSlice.reducer

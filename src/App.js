@@ -1,15 +1,16 @@
 import rough from 'roughjs/bundled/rough.esm';
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { addNewElement , updateElements, setIsDrawing } from './redux/stateReducer'
+import { addNewElement , updateElements, setIsDrawing, setElementType } from './redux/stateReducer'
 import './App.css';
 
 const generator = rough.generator();
 function App() {
   const drawings = useSelector((state) => state.canvas.elements)
   const isDrawing = useSelector((state) => state.canvas.isDrawing)
+  const elementType = useSelector((state) => state.canvas.elementType)
   const dispatch = useDispatch();
-  const [elementType, setElementType] = useState('line');
+  //const [elementType, setElementType] = useState('line');
   useLayoutEffect(() => {
     const canvas = document.getElementById('canvas');
     const roughCanvas = rough.canvas(canvas);
@@ -57,7 +58,7 @@ function App() {
             type="radio"
             id="line"
             checked={elementType === 'line'}
-            onChange={() => setElementType('line')}
+            onChange={() => dispatch(setElementType('line')) }
           />
         </label>
         <label htmlFor="rectangle">
@@ -66,7 +67,7 @@ function App() {
             type="radio"
             id="rectangle"
             checked={elementType === 'rectangle'}
-            onChange={() => setElementType('rectangle')}
+            onChange={() => dispatch(setElementType('rectangle'))}
           />
         </label>
       </div>
