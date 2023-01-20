@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Doodle from '../classes/Doodle';
+import Box from './Box';
 
 function DrawingApp() {
   const [lines, setLines] = useState([]);
@@ -46,6 +47,7 @@ function DrawingApp() {
         <button type="button" onClick={handleUndo}>Undo</button>
         <button type="button" onClick={handleRedo}>Redo</button>
       </div>
+      <Box width={100} height={100} />
 
       <svg
         onMouseDown={handleMouseDown}
