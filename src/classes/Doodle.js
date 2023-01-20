@@ -1,8 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 
 class Doodle {
-  constructor(firstPoint) {
+  constructor(firstPoint, color = 'black') {
     this.points = [firstPoint];
+    this.color = color;
   }
 
   draw() {
@@ -11,7 +12,7 @@ class Doodle {
       <path
         key={uuidv4()}
         d={path}
-        stroke="black"
+        stroke={this.color}
         fill="none"
       />
     );
