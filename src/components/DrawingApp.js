@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import Doodle from '../classes/Doodle';
 
 function DrawingApp() {
@@ -17,7 +16,7 @@ function DrawingApp() {
   const handleMouseMove = (e) => {
     if (isDrawing) {
       const last = lines[lines.length - 1];
-      last.addPoint({ x: e.clientX, y: e.clientY });
+      last.modify({ x: e.clientX, y: e.clientY });
       setLines((prev) => prev.slice(0, -1).concat(last));
     }
   };
@@ -57,12 +56,7 @@ function DrawingApp() {
         }}
       >
         {lines.map((line) => (
-          <path
-            key={uuidv4()}
-            d={line.draw()}
-            stroke="black"
-            fill="none"
-          />
+          line.draw()
         ))}
       </svg>
     </div>
