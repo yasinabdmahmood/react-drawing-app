@@ -8,14 +8,16 @@ import pencil from '../assets/images/pencil.svg';
 
 function DrawingApp() {
   const lines = useSelector((state) => state.drawings);
-  const color = useSelector((state) => state.configurations.color);
+  const [color, thickness] = useSelector(
+    (state) => [state.configurations.color, state.configurations.thickness],
+  );
   const dispatch = useDispatch();
   const [isDrawing, setIsDrawing] = useState(false);
 
   const handleMouseDown = (e) => {
     setIsDrawing(true);
     const startingPoint = { x: e.clientX, y: e.clientY };
-    const doodle = new Doodle(startingPoint, color);
+    const doodle = new Doodle(startingPoint, color, thickness);
     dispatch(addDrawing(doodle));
   };
 
