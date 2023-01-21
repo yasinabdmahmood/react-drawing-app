@@ -18,9 +18,47 @@ import eraser from '../assets/images/eraser.svg';
 
 function Bar() {
   const dispatch = useDispatch();
+  const [position, setPosition] = useState({ x: 500, y: 50 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
   const [choosedOption, setChoosedOption] = useState('pencil');
+
+  const handleMouseDown = (e) => {
+    if (e.target !== e.currentTarget) return;
+    setInitialPosition({ x: e.clientX, y: e.clientY });
+    setIsDragging(true);
+  };
+
+  const handleMouseMove = (e) => {
+    if (e.target !== e.currentTarget) return;
+    if (!isDragging) {
+      return;
+    }
+    setPosition({
+      x: position.x + e.clientX - initialPosition.x,
+      y: position.y + e.clientY - initialPosition.y,
+    });
+    setInitialPosition({ x: e.clientX, y: e.clientY });
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
   return (
-    <div className={style.container}>
+    <div
+      className={style.container}
+      style={{
+        cursor: 'grab',
+        border: isDragging ? '2px solid blue' : '1px solid black',
+        position: 'absolute',
+        left: position.x,
+        top: position.y,
+        zIndex: '1',
+      }}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+    >
       <div
         style={{
           backgroundColor: choosedOption === 'cursor' ? '#E3E2FE' : 'white',

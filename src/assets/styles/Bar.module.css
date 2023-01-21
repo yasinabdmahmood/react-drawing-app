@@ -1,7 +1,5 @@
 .container {
     position: absolute;
-    top: 50px;
-    left: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,4 +15,5 @@
 .img-container {
     padding:  10px;
     border-radius: 5px;
+    cursor: pointer;
 }
