@@ -9,3 +9,19 @@
     height: 100%;
     object-fit: cover;
 }
+.horizontal-lines {
+    width: 30%;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.horizontal-lines hr {
+    background-color: rgb(29, 26, 26);
+}
+
+.horizontal-lines hr:hover {
+    background-color: black;
+}
