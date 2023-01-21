@@ -4,6 +4,7 @@ import { addDrawing, modifyLastDrawing } from '../redux/DrawingsReducer';
 import { clearUndoStack } from '../redux/undoStackReducer';
 import Doodle from '../classes/Doodle';
 import Box from './Box';
+import pencil from '../assets/images/pencil.svg';
 
 function DrawingApp() {
   const lines = useSelector((state) => state.drawings);
@@ -32,7 +33,11 @@ function DrawingApp() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        cursor: `url(${pencil}) 4 12, auto`,
+      }}
+    >
       <Box />
       <svg
         onMouseDown={handleMouseDown}
