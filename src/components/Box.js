@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { CompactPicker } from 'react-color';
 import { addDrawing, deleteLastDrawing } from '../redux/DrawingsReducer';
-import { changeColor, changeThickness, changeShape } from '../redux/configReducer';
+import { changeColor, changeThickness } from '../redux/configReducer';
 import { addToUndoStack, removeFromUndoStack } from '../redux/undoStackReducer';
 import undo from '../assets/images/arrow-counterclockwise.svg';
 import redo from '../assets/images/arrow-clockwise.svg';
@@ -14,11 +14,10 @@ const Box = () => {
   const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
   const undoStack = useSelector((state) => state.undoStack);
   const lines = useSelector((state) => state.drawings);
-  const [currentColor, thickness, shape] = useSelector(
+  const [currentColor, thickness] = useSelector(
     (state) => [
       state.configurations.color,
       state.configurations.thickness,
-      state.configurations.shape,
     ],
   );
   const dispatch = useDispatch();
@@ -129,26 +128,6 @@ const Box = () => {
           }}
           onClick={() => dispatch(changeThickness(1))}
         />
-      </div>
-      <div>
-        <button
-          type="button"
-          style={{
-            border: shape === 'doodle' ? '1px solid blue' : '1px solid black',
-          }}
-          onClick={() => dispatch(changeShape('doodle'))}
-        >
-          Doodle
-        </button>
-        <button
-          type="button"
-          style={{
-            border: shape === 'rectangle' ? '1px solid blue' : '1px solid black',
-          }}
-          onClick={() => dispatch(changeShape('rectangle'))}
-        >
-          rectangle
-        </button>
       </div>
     </div>
   );
