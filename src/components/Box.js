@@ -4,6 +4,9 @@ import { CompactPicker } from 'react-color';
 import { addDrawing, deleteLastDrawing } from '../redux/DrawingsReducer';
 import { changeColor } from '../redux/configReducer';
 import { addToUndoStack, removeFromUndoStack } from '../redux/undoStackReducer';
+import undo from '../assets/images/arrow-counterclockwise.svg';
+import redo from '../assets/images/arrow-clockwise.svg';
+import style from '../assets/styles/Box.module.css';
 
 const Box = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -59,6 +62,7 @@ const Box = () => {
 
   return (
     <div
+      className={style.container}
       style={{
         width: '245px',
         height: '250px',
@@ -73,8 +77,12 @@ const Box = () => {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
-      <button type="button" onClick={handleUndo}>Undo</button>
-      <button type="button" onClick={handleRedo}>Redo</button>
+      <button type="button" onClick={handleUndo} className={style['undo-redo-btn']}>
+        <img src={undo} alt="undo" className={style['undo-redo-icon']} />
+      </button>
+      <button type="button" onClick={handleRedo} className={style['undo-redo-btn']}>
+        <img src={redo} alt="undo" className={style['undo-redo-icon']}/>
+      </button>
       <CompactPicker
         color={currentColor}
         onChangeComplete={handleColorChnange}
