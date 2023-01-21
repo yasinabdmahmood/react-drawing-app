@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addDrawing, modifyLastDrawing } from '../redux/DrawingsReducer';
 import { clearUndoStack } from '../redux/undoStackReducer';
-import Doodle from '../classes/Doodle';
+import createDrawing from '../helpers/shapeChooser';
 import Box from './Box';
 import pencil from '../assets/images/pencil.svg';
 
 function DrawingApp() {
   const lines = useSelector((state) => state.drawings);
-  const [color, thickness] = useSelector(
-    (state) => [state.configurations.color, state.configurations.thickness],
+  const [color, thickness, shape] = useSelector(
+    (state) => [
+      state.configurations.color,
+      state.configurations.thickness,
+      state.configurations.shape,
+    ],
   );
   const dispatch = useDispatch();
   const [isDrawing, setIsDrawing] = useState(false);
@@ -17,8 +21,10 @@ function DrawingApp() {
   const handleMouseDown = (e) => {
     setIsDrawing(true);
     const startingPoint = { x: e.clientX, y: e.clientY };
-    const doodle = new Doodle(startingPoint, color, thickness);
-    dispatch(addDrawing(doodle));
+    // const doodle = new Doodle(startingPoint, color, thickness);
+    // const rectangle = new Rectangle(startingPoint, color, thickness);
+    const drawing = createDrawing(shape, startingPoint, color, thickness);
+    dispatch(addDrawing(drawing));
   };
 
   const handleMouseMove = (e) => {
