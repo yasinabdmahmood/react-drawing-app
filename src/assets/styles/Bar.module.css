@@ -1,0 +1,23 @@
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px 10px;
+  z-index: 2;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.87);
+  -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.87);
+  -moz-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.87);
+  box-sizing: border-box;
+}
+
+.img-container {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.img-container img::selection {
+  background: none;
+}

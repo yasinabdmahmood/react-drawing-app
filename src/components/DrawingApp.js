@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addDrawing, modifyLastDrawing } from '../redux/DrawingsReducer';
 import { clearUndoStack } from '../redux/undoStackReducer';
-import Doodle from '../classes/Doodle';
+import createDrawing from '../helpers/shapeChooser';
 import Box from './Box';
+import pencil from '../assets/images/pencil.svg';
 
 function DrawingApp() {
   const lines = useSelector((state) => state.drawings);
-  const color = useSelector((state) => state.configurations.color);
+  const configurations = useSelector((state) => state.configurations);
   const dispatch = useDispatch();
   const [isDrawing, setIsDrawing] = useState(false);
 
   const handleMouseDown = (e) => {
     setIsDrawing(true);
     const startingPoint = { x: e.clientX, y: e.clientY };
-    const doodle = new Doodle(startingPoint, color);
-    dispatch(addDrawing(doodle));
+    const drawing = createDrawing(startingPoint, configurations);
+    dispatch(addDrawing(drawing));
   };
 
   const handleMouseMove = (e) => {
@@ -32,7 +33,11 @@ function DrawingApp() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        cursor: `url(${pencil}) 4 12, auto`,
+      }}
+    >
       <Box />
       <svg
         onMouseDown={handleMouseDown}

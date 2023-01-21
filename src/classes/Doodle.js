@@ -1,9 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 
 class Doodle {
-  constructor(firstPoint, color = 'black') {
+  constructor(firstPoint, configurations) {
     this.points = [firstPoint];
-    this.color = color;
+    this.color = configurations.color;
+    this.thickness = configurations.thickness;
   }
 
   draw() {
@@ -14,6 +15,7 @@ class Doodle {
         d={path}
         stroke={this.color}
         fill="none"
+        strokeWidth={`${this.thickness}`}
       />
     );
   }
