@@ -1,11 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
 
 class Rectangle {
-  constructor(firstPoint, color = 'black', thickness = 1) {
+  constructor(firstPoint, configurations) {
     this.firstPoints = firstPoint;
     this.lastPoint = firstPoint;
-    this.color = color;
-    this.thickness = thickness;
+    this.color = configurations.color;
+    this.thickness = configurations.thickness;
   }
 
   modify(lastPoint) {

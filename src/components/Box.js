@@ -47,8 +47,6 @@ const Box = () => {
 
   const handleUndo = () => {
     if (lines.length > 0) {
-      // setUndoStack(undoStack.concat([lines.slice(-1)[0]]));
-      // setLines(lines.slice(0, -1));
       dispatch(addToUndoStack(lines[lines.length - 1]));
       dispatch(deleteLastDrawing());
     }
@@ -57,7 +55,6 @@ const Box = () => {
   const handleRedo = () => {
     if (undoStack.length > 0) {
       dispatch(addDrawing(undoStack.slice(-1)[0]));
-      // setUndoStack(undoStack.slice(0, -1));
       dispatch(removeFromUndoStack());
     }
   };

@@ -1,10 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 
 class Doodle {
-  constructor(firstPoint, color = 'black', thickness = 1) {
+  constructor(firstPoint, configurations) {
     this.points = [firstPoint];
-    this.color = color;
-    this.thickness = thickness;
+    this.color = configurations.color;
+    this.thickness = configurations.thickness;
   }
 
   draw() {
