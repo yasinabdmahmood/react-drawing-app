@@ -64,6 +64,7 @@ const Box = () => {
     <div
       className={style.container}
       style={{
+        cursor: 'grab',
         width: '245px',
         height: '250px',
         backgroundColor: 'gray',
@@ -81,7 +82,7 @@ const Box = () => {
         <img src={undo} alt="undo" className={style['undo-redo-icon']} />
       </button>
       <button type="button" onClick={handleRedo} className={style['undo-redo-btn']}>
-        <img src={redo} alt="undo" className={style['undo-redo-icon']}/>
+        <img src={redo} alt="undo" className={style['undo-redo-icon']} />
       </button>
       <CompactPicker
         color={currentColor}
