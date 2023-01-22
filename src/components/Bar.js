@@ -86,7 +86,10 @@ function Bar() {
         style={{
           backgroundColor: choosedOption === 'diamond' ? '#E3E2FE' : 'white',
         }}
-        onClick={() => setChoosedOption('diamond')}
+        onClick={() => {
+          setChoosedOption('diamond');
+          dispatch(changeShape('diamond'))
+        }}
       >
         <img src={diamond} alt="diamond" />
       </div>
