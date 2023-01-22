@@ -88,7 +88,7 @@ function Bar() {
         }}
         onClick={() => {
           setChoosedOption('diamond');
-          dispatch(changeShape('diamond'))
+          dispatch(changeShape('diamond'));
         }}
       >
         <img src={diamond} alt="diamond" />
