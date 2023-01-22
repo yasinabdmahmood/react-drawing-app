@@ -2,6 +2,7 @@ import Doodle from '../classes/Doodle';
 import Rectangle from '../classes/Rectangle';
 import Line from '../classes/Line';
 import Arrow from '../classes/Arrow';
+import Ellipse from '../classes/Ellipse';
 
 const createDrawing = (startingPoint, configurations) => {
   let newDrawing = null;
@@ -17,6 +18,9 @@ const createDrawing = (startingPoint, configurations) => {
       break;
     case 'arrow':
       newDrawing = new Arrow(startingPoint, configurations);
+      break;
+    case 'ellipse':
+      newDrawing = new Ellipse(startingPoint, configurations);
       break;
     default:
       newDrawing = new Doodle(startingPoint, configurations);
