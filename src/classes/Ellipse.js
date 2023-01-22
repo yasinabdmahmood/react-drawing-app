@@ -13,12 +13,14 @@ class Ellipse {
   }
 
   static #getEllipseParam(corner1, corner2) {
-    const cx =Math.floor((corner1.x + corner2.x)/2);
-    const cy = Math.floor((corner1.y + corner2.y)/2);
-    const rx = Math.abs((corner1.x - corner2.x)/2);
-    const ry = Math.abs((corner1.y - corner2.y)/2);
+    const cx = Math.floor((corner1.x + corner2.x) / 2);
+    const cy = Math.floor((corner1.y + corner2.y) / 2);
+    const rx = Math.abs((corner1.x - corner2.x) / 2);
+    const ry = Math.abs((corner1.y - corner2.y) / 2);
 
-    return {cx,cy,rx,ry};
+    return {
+      cx, cy, rx, ry,
+    };
   }
 
   draw() {
@@ -31,8 +33,8 @@ class Ellipse {
     return (
       <ellipse
         cx={cx}
-        cy={cy} 
-        rx={rx} 
+        cy={cy}
+        rx={rx}
         ry={ry}
         key={uuidv4()}
         stroke={this.color}

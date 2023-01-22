@@ -97,7 +97,7 @@ function Bar() {
         }}
         onClick={() => {
           setChoosedOption('circle');
-          dispatch(changeShape('ellipse'))
+          dispatch(changeShape('ellipse'));
         }}
       >
         <img src={circle} alt="circle" />
