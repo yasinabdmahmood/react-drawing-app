@@ -113,7 +113,10 @@ function Bar() {
         style={{
           backgroundColor: choosedOption === 'dash' ? '#E3E2FE' : 'white',
         }}
-        onClick={() => setChoosedOption('dash')}
+        onClick={() => {
+          setChoosedOption('dash');
+          dispatch(changeShape('line'));
+        }}
       >
         <img src={dash} alt="dash" />
       </div>
