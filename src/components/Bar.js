@@ -104,7 +104,10 @@ function Bar() {
         style={{
           backgroundColor: choosedOption === 'arrow' ? '#E3E2FE' : 'white',
         }}
-        onClick={() => setChoosedOption('arrow')}
+        onClick={() => {
+          setChoosedOption('arrow');
+          dispatch(changeShape('arrow'))
+        }}
       >
         <img src={arrow} alt="arrow" />
       </div>
