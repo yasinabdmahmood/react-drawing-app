@@ -17,7 +17,7 @@ const createDrawing = (startingPoint, configurations) => {
       break;
     case 'arrow':
       newDrawing = new Arrow(startingPoint, configurations);
-    break;
+      break;
     default:
       newDrawing = new Doodle(startingPoint, configurations);
   }

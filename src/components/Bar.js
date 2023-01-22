@@ -106,7 +106,7 @@ function Bar() {
         }}
         onClick={() => {
           setChoosedOption('arrow');
-          dispatch(changeShape('arrow'))
+          dispatch(changeShape('arrow'));
         }}
       >
         <img src={arrow} alt="arrow" />

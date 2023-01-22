@@ -17,26 +17,25 @@ class Arrow {
     const [x2, y2] = [this.lastPoint.x, this.lastPoint.y];
     const path = `M ${x1} ${y1} L ${x2} ${y2}`;
     return (
-    <>
-    <defs>
-    <marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" orient="auto" markerWidth="12" markerHeight="9">
-      <path d="M 0 0 L 10 5 L 0 10" stroke="black" strokeWidth={`${this.thickness}`} fill="none"/>
-        </marker>
-    </defs>
+      <>
+        <defs>
+          <marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" orient="auto" markerWidth="12" markerHeight="9">
+            <path d="M 0 0 L 10 5 L 0 10" stroke="black" strokeWidth={`${this.thickness}`} fill="none" />
+          </marker>
+        </defs>
 
-    <path
-        key={uuidv4()}
-        className='arrow-line'
-        markerEnd='url(#head)'
-        strokeWidth={`${this.thickness}`}
-        fill='none'
-        stroke={this.color}  
-        d={path}
-    />
-        
-  </>
+        <path
+          key={uuidv4()}
+          className="arrow-line"
+          markerEnd="url(#head)"
+          strokeWidth={`${this.thickness}`}
+          fill="none"
+          stroke={this.color}
+          d={path}
+        />
 
-     
+      </>
+
     );
   }
 }
