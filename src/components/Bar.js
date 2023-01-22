@@ -95,7 +95,10 @@ function Bar() {
         style={{
           backgroundColor: choosedOption === 'circle' ? '#E3E2FE' : 'white',
         }}
-        onClick={() => setChoosedOption('circle')}
+        onClick={() => {
+          setChoosedOption('circle');
+          dispatch(changeShape('ellipse'))
+        }}
       >
         <img src={circle} alt="circle" />
       </div>
