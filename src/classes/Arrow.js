@@ -20,7 +20,7 @@ class Arrow {
       <>
         <defs>
           <marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" orient="auto" markerWidth="12" markerHeight="9">
-            <path d="M 0 0 L 10 5 L 0 10" stroke="black" strokeWidth={`${this.thickness}`} fill="none" />
+            <path d="M 0 0 L 10 5 L 0 10" stroke={this.color} strokeWidth="1" fill="none" />
           </marker>
         </defs>
 
