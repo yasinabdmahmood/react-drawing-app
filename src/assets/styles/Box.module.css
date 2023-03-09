@@ -11,6 +11,7 @@
   -moz-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.87);
   box-sizing: border-box;
 }
+
 .undo-redo-btn {
   position: relative;
   background-color: white;
@@ -26,7 +27,7 @@
 }
 
 .horizontal-lines {
-  width: 225px ;
+  width: 225px;
   margin: 5px;
   padding: 5px;
   background-color: white;
@@ -35,7 +36,7 @@
 
 .horizontal-lines hr {
   background-color: rgb(29, 26, 26);
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 
 .horizontal-lines hr:hover {
