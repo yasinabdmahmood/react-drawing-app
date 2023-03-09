@@ -18,7 +18,7 @@ import pencil from '../assets/images/pencil.svg';
 
 function Bar() {
   const dispatch = useDispatch();
-  const [position, setPosition] = useState({ x: 500, y: 50 });
+  const [position, setPosition] = useState({ x: 500, y: 10 });
   const [isDragging, setIsDragging] = useState(false);
   const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
   const [choosedOption, setChoosedOption] = useState('pencil');
