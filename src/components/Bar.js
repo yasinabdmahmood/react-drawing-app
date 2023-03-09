@@ -59,7 +59,7 @@ function Bar() {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
-      <div
+      {/* <div
         style={{
           backgroundColor: choosedOption === 'cursor' ? '#E3E2FE' : 'white',
         }}
@@ -67,7 +67,7 @@ function Bar() {
         className={style['img-container']}
       >
         <img src={cursor} alt="cursor" />
-      </div>
+      </div> */}
       <div
         className={style['img-container']}
         style={{
@@ -141,7 +141,7 @@ function Bar() {
       >
         <img src={pencil} alt="pencil" />
       </div>
-      <div
+      {/* <div
         className={style['img-container']}
         style={{
           backgroundColor: choosedOption === 'text' ? '#E3E2FE' : 'white',
@@ -167,7 +167,7 @@ function Bar() {
         onClick={() => setChoosedOption('eraser')}
       >
         <img src={eraser} alt="eraser" />
-      </div>
+      </div> */}
     </div>
   );
 }
