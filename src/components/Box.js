@@ -9,7 +9,7 @@ import redo from '../assets/images/arrow-clockwise.svg';
 import style from '../assets/styles/Box.module.css';
 
 const Box = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 10, y: 10 });
   const [isDragging, setIsDragging] = useState(false);
   const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
   const undoStack = useSelector((state) => state.undoStack);
@@ -66,15 +66,9 @@ const Box = () => {
     <div
       className={style.container}
       style={{
-        cursor: 'grab',
-        width: '245px',
-        height: '250px',
-        backgroundColor: 'gray',
         border: isDragging ? '2px solid blue' : '1px solid black',
-        position: 'absolute',
         left: position.x,
         top: position.y,
-        zIndex: '1',
       }}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
