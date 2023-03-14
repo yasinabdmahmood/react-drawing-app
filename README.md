@@ -127,7 +127,7 @@ In order to run this project, you need to have Node.js and npm (Node Package Man
 
 1. Clone this repository to your desired folder:
 
-```git clone https://github.com/[username]/[repository-name].git```
+```git clone https://github.com/yasinabdmahmood/react-drawing-app.git```
 
 2. Change directory to the project's root folder:
 
@@ -136,13 +136,13 @@ In order to run this project, you need to have Node.js and npm (Node Package Man
 
 3. Install the project's dependencies by running the following command in your terminal:
 
-```npm install
+```npm install```
 
 ### Usage
 
 4. To run the app in development mode, execute the following command:
 
-```npm start
+```npm start```
 
 
 5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The app will automatically reload if you make any changes to the code.
