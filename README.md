@@ -38,7 +38,7 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  - [🚀 Live and Vedio Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -100,11 +100,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live and Vedio Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
 
 - [Live Demo Link](https://happydrawing.netlify.app/)
+- [Vedio Demo Link](https://drive.google.com/file/d/1clyq3P7mMlK2gLP5fldDUrhNZDLelkqV/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
