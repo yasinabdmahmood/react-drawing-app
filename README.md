@@ -44,14 +44,10 @@ After you're finished please remove all the comments and instructions!
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -175,11 +171,10 @@ That's it! You should now be able to run the app locally on your machine. If you
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Erase Tool:** We are currently working on adding an erase functionality to the drawing app. This will allow users to easily erase any mistakes or unwanted drawings.
+- [ ] **Edit Your Drawing:**  In the next update, we plan to add the ability for users to click on their drawing to edit it. This feature will allow users to make quick and easy edits to their drawings without having to start over from scratch.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,35 +194,11 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+Thank you for checking out my repository! If you find it useful, please consider giving it a star. Your support helps me improve this project and make it more accessible to others. To give this repository a star, simply click the star button at the top of the page. If you have any feedback or suggestions, please feel free to open an issue or pull request. Thank you for your support!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
