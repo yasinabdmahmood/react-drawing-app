@@ -192,7 +192,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
 Thank you for checking out my repository! If you find it useful, please consider giving it a star. Your support helps me improve this project and make it more accessible to others. To give this repository a star, simply click the star button at the top of the page. If you have any feedback or suggestions, please feel free to open an issue or pull request. Thank you for your support!
 
