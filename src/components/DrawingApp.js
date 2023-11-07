@@ -35,7 +35,6 @@ function DrawingApp() {
   const handlePointerDown = (e) => {
     setIsDrawing(true);
     const startingPoint = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-    console.log(startingPoint);
     const drawing = createDrawing(startingPoint, configurations);
     dispatch(addDrawing(drawing));
   };
