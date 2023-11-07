@@ -33,13 +33,12 @@ function DrawingApp() {
   };
 
   const handlePointerDown = (e) => {
-   setIsDrawing(true);
-   const startingPoint = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-   console.log(startingPoint);
-   const drawing = createDrawing(startingPoint, configurations);
-   dispatch(addDrawing(drawing));
+    setIsDrawing(true);
+    const startingPoint = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    console.log(startingPoint);
+    const drawing = createDrawing(startingPoint, configurations);
+    dispatch(addDrawing(drawing));
   };
-  
   const handlePointerMove = (e) => {
     if (isDrawing) {
       const last = lines[lines.length - 1];
@@ -47,12 +46,10 @@ function DrawingApp() {
       dispatch(modifyLastDrawing(last));
     }
   };
-  
-  const handlePointerUp = (e) => {
+  const handlePointerUp = () => {
     setIsDrawing(false);
     dispatch(clearUndoStack());
   };
-  
 
   return (
     <div
