@@ -38,76 +38,73 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  - [🚀 Live and Vedio Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 HappyDrawing  <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> Welcome to HappyDrawing, a versatile drawing app built with React that lets you unleash your creativity and bring your ideas to life. Whether you're a professional artist or just starting out, HappyDrawing is the perfect tool for creating stunning designs, sketches, and doodles.
 
-**[your_project__name]** is a...
+> With a wide range of features such as customizable line thickness, various shapes, and a vast color palette, HappyDrawing offers limitless possibilities for your creativity. You can also easily adjust the thickness of your strokes or choose from a range of colors to make your artwork truly unique.
+
+> HappyDrawing also offers a handy undo/redo feature, allowing you to make corrections or experiment with different styles without losing your progress.
+
+> So why wait? Start using HappyDrawing today and take the first step towards creating amazing works of art!
+
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
-  <summary>Client</summary>
+ 
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://sass-lang.com/">Sass</a></li>
   </ul>
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Drawing:** Users can draw using their mouse or trackpad on the canvas provided. Simply hold down the left button and move the cursor to create your own unique designs.
+
+- **Thickness:** Users can adjust the thickness of their drawing lines by choosing from a range of thickness options. This allows for more precise drawings and gives users more control over their art.
+
+- **Shapes:** In addition to freehand drawing, the app also allows users to draw a variety of shapes, including squares, circles, arrows, straight lines, and diamonds. This feature is useful for creating more complex designs and shapes.
+
+- **Color:** Users can choose from a variety of colors to draw with, including black, white, red, blue, green, yellow, and more. This allows users to add more color to their art and make their drawings stand out.
+
+- **Undo/Redo:** The app also includes an undo and redo feature, which allows users to correct any mistakes they may have made while drawing. This is a useful feature for those who want to create more polished and professional-looking art.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live and Vedio Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://happydrawing.netlify.app/)
+- [Vedio Demo Link](https://drive.google.com/file/d/1clyq3P7mMlK2gLP5fldDUrhNZDLelkqV/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,87 +112,49 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+In order to run this project, you need to have Node.js and npm (Node Package Manager) installed on your machine. If you don't have them installed, you can download them from the official website: [https://nodejs.org/](https://nodejs.org/).
 
 ### Setup
 
-Clone this repository to your desired folder:
+1. Clone this repository to your desired folder:
 
-<!--
-Example commands:
+```git clone https://github.com/yasinabdmahmood/react-drawing-app.git```
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+2. Change directory to the project's root folder:
+
 
 ### Install
 
-Install this project with:
+3. Install the project's dependencies by running the following command in your terminal:
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+```npm install```
 
 ### Usage
 
-To run the project, execute the following command:
+4. To run the app in development mode, execute the following command:
 
-<!--
-Example command:
+```npm start```
 
-```sh
-  rails server
-```
---->
 
-### Run tests
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The app will automatically reload if you make any changes to the code.
 
-To run tests, run the following command:
+6. To build the app for production, run:
 
-<!--
-Example command:
+```npm run build```
 
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+This command will create an optimized production build of the app in the `build` folder.
 
-### Deployment
+That's it! You should now be able to run the app locally on your machine. If you have any issues or questions, feel free to reach out to us through [our GitHub repository](https://github.com/[username]/[repository-name]/issues).
 
-You can deploy this project using:
 
-<!--
-Example:
 
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
 
 <!-- AUTHORS -->
 
@@ -212,11 +171,10 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Erase Tool:** We are currently working on adding an erase functionality to the drawing app. This will allow users to easily erase any mistakes or unwanted drawings.
+- [ ] **Edit Your Drawing:**  In the next update, we plan to add the ability for users to click on their drawing to edit it. This feature will allow users to make quick and easy edits to their drawings without having to start over from scratch.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,37 +192,12 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
 
-If you like this project...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+Thank you for checking out my repository! If you find it useful, please consider giving it a star. Your support helps me improve this project and make it more accessible to others. To give this repository a star, simply click the star button at the top of the page. If you have any feedback or suggestions, please feel free to open an issue or pull request. Thank you for your support!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
