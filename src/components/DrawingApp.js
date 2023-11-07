@@ -32,6 +32,28 @@ function DrawingApp() {
     dispatch(clearUndoStack());
   };
 
+  const handlePointerDown = (e) => {
+   setIsDrawing(true);
+   const startingPoint = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+   console.log(startingPoint);
+   const drawing = createDrawing(startingPoint, configurations);
+   dispatch(addDrawing(drawing));
+  };
+  
+  const handlePointerMove = (e) => {
+    if (isDrawing) {
+      const last = lines[lines.length - 1];
+      last.modify({ x: e.touches[0].clientX, y: e.touches[0].clientY });
+      dispatch(modifyLastDrawing(last));
+    }
+  };
+  
+  const handlePointerUp = (e) => {
+    setIsDrawing(false);
+    dispatch(clearUndoStack());
+  };
+  
+
   return (
     <div
       style={{
@@ -41,8 +63,11 @@ function DrawingApp() {
       <Box />
       <svg
         onMouseDown={handleMouseDown}
+        onTouchStart={handlePointerDown}
         onMouseMove={handleMouseMove}
+        onTouchMove={handlePointerMove}
         onMouseUp={handleMouseUp}
+        onTouchEnd={handlePointerUp}
         style={{
           position: 'absolute', left: '0%', top: '0%', width: '100vw', height: '100vh', border: '1px solid black', boxSizing: 'border-box',
         }}
